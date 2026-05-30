@@ -119,7 +119,7 @@ for msg in st.session_state.messages:
         with st.chat_message(msg["role"]):
             st.markdown(msg["content"])
 
-if user_input := st.chat_input("수학 문제에 대해 질문해 보세요. (예: 방금 올린 3번 문제 힌트 줘)"):
+if user_input := st.chat_input("늘어져"):
     with st.chat_message("user"):
         st.markdown(user_input)
     st.session_state.messages.append({"role": "user", "content": user_input})
