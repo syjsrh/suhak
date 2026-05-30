@@ -3,19 +3,13 @@ from openai import OpenAI
 import PyPDF2
 
 # ---------------------------------------------------------
-# 1. 환경 설정 및 API 클라이언트 초기화 (클라우드 전용)
+# 1. 환경 설정 및 API 클라이언트 초기화 (Streamlit Secrets만 사용)
 # ---------------------------------------------------------
-# Streamlit Secrets에서 API 키를 바로 가져옵니다. (dotenv 필요 없음)
+# Streamlit Secrets에서 API 키를 가져옵니다.
 try:
     api_key = st.secrets["OPENAI_API_KEY"]
 except KeyError:
     st.error("⚠️ Streamlit Secrets에 OPENAI_API_KEY가 설정되어 있지 않습니다.")
-    st.stop()
-
-client = OpenAI(api_key=api_key)
-
-if not api_key:
-    st.error("⚠️ key.env 파일에 OPENAI_API_KEY가 설정되어 있지 않습니다.")
     st.stop()
 
 client = OpenAI(api_key=api_key)
