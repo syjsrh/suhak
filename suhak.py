@@ -112,9 +112,9 @@ if "logged_in_user" not in st.session_state:
     st.session_state.logged_in_user = None
 
 if st.session_state.logged_in_user is None:
-    st.set_page_config(page_title="AI 과외 형", page_icon="🧌", layout="centered")
-    st.title("👌 개레전드 과외 형")
-    st.subheader("나보다 내 약점을 더 잘 아는 든든한 전과목 과외 형")
+    st.set_page_config(page_title="형이야", page_icon="🧌", layout="centered")
+    st.title("👌저메추 해주세요")
+    st.subheader("전과목 질문 가능")
     
     menu = ["로그인", "회원가입"]
     choice = st.tabs(menu)
@@ -156,8 +156,8 @@ if st.session_state.logged_in_user is None:
 current_user = st.session_state.logged_in_user
 user_tier, user_usage, past_notes = get_user_data(current_user)
 
-st.set_page_config(page_title="AI 과외 형", page_icon="🧌", layout="centered")
-st.title("📚 개레전드 과외 형")
+st.set_page_config(page_title="참 다행이야", page_icon="🧌", layout="centered")
+st.title("📚 sPapa")
 
 # ---------------------------------------------------------
 # 5. 사이드바 - 유저 정보, 등급 제한, 오답노트
